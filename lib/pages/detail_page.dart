@@ -310,7 +310,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
           ),
           Container(
-            color: Color(0XFF42A5F5).withOpacity(0.4), // Mavi arka plan
+            color: Color(0XFF42A5F5).withOpacity(0.3), // Mavi arka plan
             alignment: Alignment.center,
           ),
           IconButton(
