@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:study_flow/pages/detail_page.dart';
 
 class Course {
   final String title;
@@ -64,23 +65,32 @@ class CourseCard extends StatelessWidget {
       child: Container(
         width: 250,
         height: 200,
-        child: Card(
-          margin: EdgeInsets.all(10),
-          child: ListTile(
-            title: Text(course.title),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('${course.category} - ${course.grade}'),
-                Text(course.description),
-              ],
-            ),
-            trailing: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('${course.favnumber}+'),
-                Icon(Icons.favorite_border),
-              ],
+        child: InkWell(
+          onTap: () {
+            // Sayfa değiştirme işlemi
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => DetailPage()),
+            );
+          },
+          child: Card(
+            margin: EdgeInsets.all(10),
+            child: ListTile(
+              title: Text(course.title),
+              subtitle: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('${course.category} - ${course.grade}'),
+                  Text(course.description),
+                ],
+              ),
+              trailing: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('${course.favnumber}+'),
+                  Icon(Icons.favorite_border),
+                ],
+              ),
             ),
           ),
         ),
