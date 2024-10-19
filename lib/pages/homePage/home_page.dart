@@ -72,38 +72,38 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: 0,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        onTap: (index) {},
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-              color: Colors.orange,
-              size: 30,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_box_outlined,
-              color: Colors.black,
-              size: 30,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_outline,
-              color: Colors.black,
-              size: 30,
-            ),
-            label: '',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   currentIndex: 0,
+      //   showSelectedLabels: false,
+      //   showUnselectedLabels: false,
+      //   onTap: (index) {},
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.home,
+      //         color: Colors.orange,
+      //         size: 30,
+      //       ),
+      //       label: '',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.add_box_outlined,
+      //         color: Colors.black,
+      //         size: 30,
+      //       ),
+      //       label: '',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.person_outline,
+      //         color: Colors.black,
+      //         size: 30,
+      //       ),
+      //       label: '',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
