@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:study_flow/pages/upload_page.dart';
 import 'pages/detail_page.dart';
 import 'pages/upload_page.dart';
+import 'pages/fileOperation_page.dart';
+import 'pages/settings_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -49,6 +51,29 @@ class MyHomePage extends StatelessWidget {
                 );
               },
               child: Text('Dosya Yükleme Sayfasına Git'),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => AccountEditPage(),
+                  ),
+                );
+              },
+              child: Text('Dosya Düzenleme Sayfasına Git'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SettingsPage(),
+                  ),
+                );
+              },
+              child: Text('Ayarlar Sayfasına Git'),
             ),
           ],
         ),

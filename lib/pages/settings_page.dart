@@ -14,25 +14,25 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: UploadPage(),
+      home: SettingsPage(),
     );
   }
 }
 
-class UploadPage extends StatefulWidget {
+class SettingsPage extends StatefulWidget {
   @override
-  State<UploadPage> createState() => _UploadPageState();
+  State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _UploadPageState extends State<UploadPage> {
+class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-       backgroundColor: Color(0xFFF5F5F5),
+      backgroundColor: Color(0xFFF5F5F5),
       appBar: AppBar(
-          backgroundColor: Colors.white,
+        backgroundColor: Colors.white,
         title: Text(
-          'Yeni Kaynak Yükle',
+          'Ayarlar',
           style: TextStyle(fontWeight: FontWeight.bold), 
         ),
         centerTitle: true,
@@ -45,167 +45,10 @@ class _UploadPageState extends State<UploadPage> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: 40), 
-              // Dosya Yükle Kutusu
-              Container(
-                height: 150,
-                width: 250,
-                decoration: BoxDecoration(
-                  color: Colors.blue[100],
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.grey.withOpacity(0.3), 
-                      spreadRadius: 2, 
-                      blurRadius: 2,
-                      offset: Offset(2, 2), 
-                    ),
-                  ],
-                ),
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.upload_file, size: 50, color: Colors.blue),
-                      SizedBox(height: 10),
-                      Text(
-                        'Dosya Yükle',
-                        style: TextStyle(
-                          fontSize: 18,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 40),
-        
-              // Bölüm Butonu
-              Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-        BoxShadow(
-          color: Colors.orange.withOpacity(0.3), 
-          spreadRadius: 2, 
-          blurRadius: 2, 
-          offset: Offset(2, 2), 
-        ),
-            ],
-            borderRadius: BorderRadius.circular(20), 
-          ),
-          child: DropdownButtonFormField<String>(
-            decoration: InputDecoration(
-        labelText: 'Bölüm',
-        labelStyle: TextStyle(color: Colors.grey[600]), 
-        border: InputBorder.none, 
-        filled: true,
-        fillColor: Colors.white,
-        
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20), 
-          borderSide: BorderSide(color: Colors.transparent),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20), 
-          borderSide: BorderSide(color: Colors.transparent), 
-        ),
-            ),
-            items: ['Bölüm 1', 'Bölüm 2', 'Bölüm 3']
-          .map((label) => DropdownMenuItem(
-                child: Text(label),
-                value: label,
-              ))
-          .toList(),
-            onChanged: (value) {},
-          ),
-        ),
-         SizedBox(height: 20),
-        
-              // Ders Butonu
-              Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-        BoxShadow(
-          color: Colors.orange.withOpacity(0.3),
-          spreadRadius: 2, 
-          blurRadius: 2, 
-          offset: Offset(2, 2), 
-        ),
-            ],
-            borderRadius: BorderRadius.circular(20), 
-          ),
-          child: DropdownButtonFormField<String>(
-            decoration: InputDecoration(
-        labelText: 'Ders',
-        labelStyle: TextStyle(color: Colors.grey[600]), 
-        border: InputBorder.none, 
-        filled: true,
-        fillColor: Colors.white,
-             
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20), 
-          borderSide: BorderSide(color: Colors.transparent), 
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20), 
-          borderSide: BorderSide(color: Colors.transparent), 
-        ),
-            ),
-            items: ['Ders 1', 'Ders 2', 'Ders 3']
-          .map((label) => DropdownMenuItem(
-                child: Text(label),
-                value: label,
-              ))
-          .toList(),
-            onChanged: (value) {},
-          ),
-        ),
-         SizedBox(height: 20),
-              // Sınıf Butonu
-              Container(
-          decoration: BoxDecoration(
-            boxShadow: [
-        BoxShadow(
-          color: Colors.orange.withOpacity(0.3), 
-          spreadRadius: 2, 
-          blurRadius: 2, 
-          offset: Offset(2, 2), 
-        ),
-            ],
-            borderRadius: BorderRadius.circular(20), 
-          ),
-          child: DropdownButtonFormField<String>(
-            decoration: InputDecoration(
-        labelText: 'Sınıf',
-        labelStyle: TextStyle(color: Colors.grey[600]),
-        border: InputBorder.none,
-        filled: true,
-        fillColor: Colors.white, 
-        
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20),
-          borderSide: BorderSide(color: Colors.transparent), 
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(20), 
-          borderSide: BorderSide(color: Colors.transparent), 
-        ),
-            ),
-            items: ['Sınıf 1', 'Sınıf 2', 'Sınıf 3']
-          .map((label) => DropdownMenuItem(
-                child: Text(label),
-                value: label,
-              ))
-          .toList(),
-            onChanged: (value) {},
-          ),
-        ),
-        
-         SizedBox(height: 20),
-              // Açıklama Butonu
-              Container(
+              SizedBox(height: 50), 
+            
+              
+            Container(
           decoration: BoxDecoration(
             boxShadow: [
         BoxShadow(
@@ -219,12 +62,15 @@ class _UploadPageState extends State<UploadPage> {
           ),
           child: TextFormField(
             decoration: InputDecoration(
-        labelText: 'Açıklama',
+        labelText: 'Ad-Soyad',
         labelStyle: TextStyle(color: Colors.grey[600]), 
         filled: true,
         fillColor: Colors.white, 
         border: InputBorder.none, 
-             
+             prefixIcon: Icon(
+          Icons.person, // Use any icon you prefer
+          color: Colors.grey, // Optional: set color for the icon
+        ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(20), 
           borderSide: BorderSide(color: Colors.transparent), 
@@ -234,22 +80,131 @@ class _UploadPageState extends State<UploadPage> {
           borderSide: BorderSide(color: Colors.transparent),
         ),
             ),
-            maxLines: 3, 
+            maxLines: 1, 
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 30),
+         Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+        BoxShadow(
+          color: Colors.orange.withOpacity(0.3), 
+          spreadRadius: 2, 
+          blurRadius: 2, 
+          offset: Offset(2, 2), 
+        ),
+            ],
+            borderRadius: BorderRadius.circular(20), 
+          ),
+          child: TextFormField(
+            decoration: InputDecoration(
+        labelText: 'Email',
+        labelStyle: TextStyle(color: Colors.grey[600]), 
+        filled: true,
+        fillColor: Colors.white, 
+        border: InputBorder.none, 
+             prefixIcon: Icon(
+          Icons.email, // Use any icon you prefer
+          color: Colors.grey, // Optional: set color for the icon
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent), 
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+            ),
+            maxLines: 1, 
+          ),
+        ),
+        SizedBox(height: 30),
+        Container(
+          decoration: BoxDecoration(
+            boxShadow: [
+        BoxShadow(
+          color: Colors.orange.withOpacity(0.3), 
+          spreadRadius: 2, 
+          blurRadius: 2, 
+          offset: Offset(2, 2), 
+        ),
+            ],
+            borderRadius: BorderRadius.circular(20), 
+          ),
+          child: TextFormField(
+            decoration: InputDecoration(
+        labelText: 'Yeni Şifre',
+        labelStyle: TextStyle(color: Colors.grey[600]), 
+        filled: true,
+        fillColor: Colors.white, 
+        border: InputBorder.none, 
+             prefixIcon: Icon(
+          Icons.lock, // Use any icon you prefer
+          color: Colors.grey, // Optional: set color for the icon
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent), 
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+            ),
+            maxLines: 1, 
+          ),
+        ),
+        SizedBox(height: 30),
+        Container( 
+          decoration: BoxDecoration(
+            boxShadow: [
+        BoxShadow(
+          color: Colors.orange.withOpacity(0.3), 
+          spreadRadius: 2, 
+          blurRadius: 2, 
+          offset: Offset(2, 2), 
+        ),
+            ],
+            borderRadius: BorderRadius.circular(20), 
+          ),
+          child: TextFormField(
+            decoration: InputDecoration(
+        labelText: 'Yeni Şifre Tekrar',
+        labelStyle: TextStyle(color: Colors.grey[600]), 
+        filled: true,
+        fillColor: Colors.white, 
+        border: InputBorder.none,
+        // Add the prefixIcon here
+        prefixIcon: Icon(
+          Icons.lock, // Use any icon you prefer
+          color: Colors.grey, // Optional: set color for the icon
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent), 
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(20), 
+          borderSide: BorderSide(color: Colors.transparent),
+        ),
+            ),
+            maxLines: 1, 
+          ),
+        ),
+        SizedBox(height: 40),
         
         
-              // Paylaş Butonu
+             
               SizedBox(
                 width: 150, 
                 child: ElevatedButton.icon(
                   onPressed: () {
                    
                   },
-                  icon: Icon(Icons.share),
+                  icon: Icon(Icons.edit),
                   label: Text(
-                    'Paylaş',
+                    'Düzenle',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold, 
@@ -257,7 +212,7 @@ class _UploadPageState extends State<UploadPage> {
                     ),
                   ),
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: Colors.white,
+                     backgroundColor: Colors.white,
                     iconColor: Colors.black,
                     padding: EdgeInsets.symmetric(vertical: 15),
                     elevation: 5,
@@ -276,22 +231,7 @@ class _UploadPageState extends State<UploadPage> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home Page',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.upload_file),
-            label: 'Upload',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-      ),
+         
     );
   }
 }
