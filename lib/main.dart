@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'pages/detail_page.dart';
-import 'pages/upload_page.dart';
-import 'pages/fileOperation_page.dart';
-import 'pages/settings_page.dart';
+
+import 'package:study_flow/pages/bottomnav.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -14,9 +13,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
-      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+      home: BottomPage(),
     );
   }
 }
+
 

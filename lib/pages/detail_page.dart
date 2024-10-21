@@ -67,6 +67,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ),
       ),
+
     );
   }
 
