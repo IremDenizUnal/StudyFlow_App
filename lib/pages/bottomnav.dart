@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:study_flow/pages/detail_page.dart';
 import 'package:study_flow/pages/homePage/home_page.dart';
 import 'package:study_flow/pages/profile_page.dart';
+import 'package:study_flow/pages/upload_page.dart';
 
 class BottomPage extends StatefulWidget {
   BottomPage({super.key});
@@ -15,7 +16,7 @@ class _BottomPageState extends State<BottomPage> {
 
   List _pages = [
     HomePage(),
-    DetailPage(),
+    UploadPage(),
     ProfilePage(),
   ];
   @override
