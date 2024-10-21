@@ -14,6 +14,7 @@ class _DetailPageState extends State<DetailPage> {
     double screenHeight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: Color(0XFFF4F8FA),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -25,7 +26,7 @@ class _DetailPageState extends State<DetailPage> {
                 Container(
                   padding: EdgeInsets.all(30.0),
                   decoration: BoxDecoration(
-                    color: Color(0XFF42A5F5).withOpacity(0.4),
+                    color: Color(0XFF96B6C5).withOpacity(0.3),
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(30),
                     ),
@@ -66,22 +67,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
         ),
       ),
-      // bottomNavigationBar: BottomNavigationBar(
-      //   items: [
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.home),
-      //       label: 'Home Page',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.upload_file),
-      //       label: 'Upload',
-      //     ),
-      //     BottomNavigationBarItem(
-      //       icon: Icon(Icons.person),
-      //       label: 'Profile',
-      //     ),
-      //   ],
-      // ),
+
     );
   }
 
@@ -118,7 +104,7 @@ class _DetailPageState extends State<DetailPage> {
                   IconButton(
                     icon: Icon(
                       index < userRating ? Icons.star : Icons.star_outline,
-                      color: Color(0XFFF57C00).withOpacity(0.9),
+                      color: Color(0XFFFF9874),
                     ),
                     onPressed: () {
                       setState(() {
@@ -136,7 +122,7 @@ class _DetailPageState extends State<DetailPage> {
           ),
           // Kullanıcının puanı
 
-          SizedBox(height: 15),
+          SizedBox(height: 30),
           Row(
             children: [
               SizedBox(
@@ -185,7 +171,7 @@ class _DetailPageState extends State<DetailPage> {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          backgroundColor: Color(0XFFF57C00).withOpacity(0.9),
+          backgroundColor: Color(0XFFFF9874),
           shadowColor: Colors.grey[700],
         ),
       ),
@@ -298,7 +284,7 @@ class _DetailPageState extends State<DetailPage> {
 
   Container imagePart(double screenHeight, BuildContext context) {
     return Container(
-      height: screenHeight * 0.15,
+      height: screenHeight * 0.20,
       child: Stack(
         children: [
           Opacity(
@@ -310,7 +296,7 @@ class _DetailPageState extends State<DetailPage> {
             ),
           ),
           Container(
-            color: Color(0XFF42A5F5).withOpacity(0.3), // Mavi arka plan
+            color: Color(0XFF96B6C5).withOpacity(0.3), // Mavi arka plan
             alignment: Alignment.center,
           ),
           IconButton(
@@ -337,10 +323,9 @@ class _DetailPageState extends State<DetailPage> {
         Container(
           width: screenWidth * 0.5,
           child: LinearProgressIndicator(
-            value: fillPercentage,
-            backgroundColor: Colors.grey[400],
-            color: Color(0XFFF57C00).withOpacity(0.9),
-          ),
+              value: fillPercentage,
+              backgroundColor: Colors.grey[400],
+              color: Color(0XFFFF9874)),
         ),
       ],
     );
