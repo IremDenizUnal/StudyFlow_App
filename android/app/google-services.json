@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "386408582289",
+    "project_id": "studyflowapp-c641f",
+    "storage_bucket": "studyflowapp-c641f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386408582289:android:65af2c7604c8bff9984330",
+        "android_client_info": {
+          "package_name": "com.example.studyflowapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBS5VFouOLMEu_cXp9zIRyOjPc9OqWgST8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
