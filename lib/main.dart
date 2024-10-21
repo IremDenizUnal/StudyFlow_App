@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:study_flow/pages/upload_page.dart';
 import 'pages/detail_page.dart';
 import 'pages/upload_page.dart';
 import 'pages/fileOperation_page.dart';
@@ -15,69 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Ana Sayfa',
-      home: MyHomePage(),
+      
+      home: HomePage(),
     );
   }
 }
 
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Ana Sayfa'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => DetailPage(),
-                  ),
-                );
-              },
-              child: Text('Detay Sayfasına Git'),
-            ), ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => UploadPage(),
-                  ),
-                );
-              },
-              child: Text('Dosya Yükleme Sayfasına Git'),
-            ),
-
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => AccountEditPage(),
-                  ),
-                );
-              },
-              child: Text('Dosya Düzenleme Sayfasına Git'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SettingsPage(),
-                  ),
-                );
-              },
-              child: Text('Ayarlar Sayfasına Git'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
